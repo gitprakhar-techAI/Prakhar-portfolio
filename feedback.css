@@ -1,0 +1,167 @@
+/* ===========================
+   FEEDBACK PAGE STYLES
+   =========================== */
+
+   .feedback-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .feedback-info { display: flex; flex-direction: column; gap: 1.2rem; }
+  
+  .contact-details { display: flex; flex-direction: column; gap: 1.1rem; margin-top: 0.5rem; }
+  
+  .contact-item { display: flex; align-items: center; gap: 1rem; }
+  
+  .contact-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    background: var(--tag-bg);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  
+  .contact-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
+  }
+  
+  .contact-value {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    word-break: break-all;
+  }
+  
+  a.contact-value:hover { color: var(--accent); }
+  
+  /* Form */
+  .feedback-form-wrapper { position: sticky; top: 80px; }
+  
+  .feedback-form { display: flex; flex-direction: column; gap: 1.3rem; }
+  
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  
+  .form-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.3px;
+  }
+  
+  .form-input {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    width: 100%;
+  }
+  
+  .form-input::placeholder { color: var(--text-muted); }
+  
+  .form-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.10);
+  }
+  
+  .form-textarea { min-height: 130px; resize: vertical; }
+  
+  /* Subject Chips */
+  .subject-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  
+  .subject-chip {
+    padding: 0.4rem 0.9rem;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .subject-chip:hover { border-color: var(--accent); color: var(--text-primary); }
+  
+  .subject-chip.active {
+    background: var(--accent);
+    color: var(--btn-primary-text);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  
+  /* Stars */
+  .star-rating { display: flex; gap: 0.3rem; }
+  
+  .star {
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.15s ease;
+    line-height: 1;
+    padding: 0;
+  }
+  
+  .star.active { color: var(--accent); }
+  .star:hover  { transform: scale(1.2); }
+  
+  .submit-btn { width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem; }
+  
+  /* Success */
+  .success-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 3.5rem 2rem;
+    min-height: 350px;
+    animation: fadeUp 0.5s ease both;
+  }
+  
+  .success-icon { font-size: 3.5rem; }
+  
+  .success-msg h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  .success-msg p { color: var(--text-secondary); font-size: 0.95rem; }
+  
+  @media (max-width: 900px) {
+    .feedback-layout { grid-template-columns: 1fr; gap: 3rem; padding-top: 3rem; }
+    .feedback-form-wrapper { position: static; }
+  }
+  
+  @media (max-width: 600px) {
+    .feedback-layout { padding-top: 2.5rem; padding-bottom: 3rem; }
+    .contact-value { font-size: 0.85rem; }
+    .subject-chip { font-size: 0.78rem; padding: 0.35rem 0.75rem; }
+    .star { font-size: 1.4rem; }
+    .feedback-form { gap: 1rem; }
+  }

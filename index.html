@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>(function(){var t=localStorage.getItem('portfolio-theme')||'dark';document.documentElement.dataset.theme=t;})();</script>
+  <title>Prakhar Maheshwari — Portfolio</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">Prakhar<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon moon">🌙</span>
+        <span class="theme-icon sun">☀️</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <main class="page-content">
+    <section class="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-inner">
+        <!-- Profile Photo -->
+        <div class="profile-wrapper animate-fadeup">
+          <div class="profile-ring"></div>
+          <div class="profile-photo">
+            <img src="prakhar.jpeg" alt="Prakhar Maheshwari" />
+          </div>
+          <div class="status-dot">
+            <span class="dot-pulse"></span>
+            <span>Available for work</span>
+          </div>
+        </div>
+
+        <!-- Hero Text -->
+        <div class="hero-text">
+          <div class="animate-fadeup delay-1">
+            <span class="section-tag">Hello, World 👋</span>
+          </div>
+          <h1 class="hero-name animate-fadeup delay-2">
+            Prakhar <br /><span>Maheshwari</span>
+          </h1>
+          <div class="hero-role animate-fadeup delay-3">
+            <span class="role-prefix">I'm a </span>
+            <span class="role-typed" id="typedRole"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+          <p class="hero-desc animate-fadeup delay-4">
+            Crafting digital experiences with precision and purpose. I turn complex problems into clean, elegant interfaces — one pixel at a time.
+          </p>
+
+          <!-- Social Links -->
+          <div class="social-links animate-fadeup delay-4">
+            <a href="https://github.com/gitprakhar-techAI" target="_blank" rel="noopener" class="social-link" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/prakhar-maheshwari-012bb5334" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <!-- <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" title="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a> -->
+            <a href="prakhermaheshwari2007@gmail.com" class="social-link" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta animate-fadeup delay-5">
+            <a href="projects.html" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> View Projects
+            </a>
+            <a href="feedback.html" class="btn btn-outline">
+              <i class="fa-regular fa-comment-dots"></i> Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="container">
+        <div class="stats-row animate-fadeup delay-5">
+          <div class="stat-item">
+            <span class="stat-num">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-copy">© 2026 <span>Prakhar Maheshwari</span>. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/gitprakhar-techAI" target="_blank" class="social-link"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/prakhar-maheshwari-012bb5334" target="_blank" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+      <!-- <a href="https://twitter.com" target="_blank" class="social-link"><i class="fa-brands fa-x-twitter"></i></a> -->
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Theme Toggle
+    // Theme handled by theme.js
+   
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Typing Effect
+    const roles = ['Aspiring Data Analyst', 'Problem Solver', 'Creative Coder','AI Engineer'];
+    let ri = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typedRole');
+    function type() {
+      const word = roles[ri];
+      el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
+      if (!deleting && ci > word.length)  { deleting = true; setTimeout(type, 1200); return; }
+      if (deleting && ci < 0)             { deleting = false; ri = (ri+1) % roles.length; }
+      setTimeout(type, deleting ? 60 : 100);
+    }
+    type();
+  </script>
+</body>
+</html>

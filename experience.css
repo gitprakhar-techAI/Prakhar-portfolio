@@ -1,0 +1,122 @@
+/* ===========================
+   EXPERIENCE PAGE STYLES
+   =========================== */
+
+   .exp-header { padding-top: 5rem; padding-bottom: 3rem; }
+
+   .timeline-section { padding-bottom: 5rem; }
+   
+   .timeline {
+     position: relative;
+     padding-left: 2rem;
+   }
+   
+   .timeline::before {
+     content: '';
+     position: absolute;
+     left: 0; top: 0; bottom: 0;
+     width: 2px;
+     background: linear-gradient(to bottom,
+       rgba(var(--accent-rgb),1),
+       rgba(var(--accent-2-rgb),1),
+       transparent);
+     border-radius: 2px;
+   }
+   
+   .timeline-item {
+     position: relative;
+     padding-bottom: 2.5rem;
+     padding-left: 2.5rem;
+   }
+   
+   .tl-dot {
+     position: absolute;
+     left: -1.45rem; top: 0.35rem;
+     width: 14px; height: 14px;
+     border-radius: 50%;
+     background: var(--accent);
+     border: 3px solid var(--bg-primary);
+     box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.25);
+     transition: transform 0.2s ease;
+   }
+   
+   .timeline-item:hover .tl-dot { transform: scale(1.3); }
+   
+   .tl-date {
+     font-size: 0.78rem;
+     font-weight: 600;
+     letter-spacing: 1px;
+     color: var(--text-muted);
+     text-transform: uppercase;
+     margin-bottom: 0.8rem;
+   }
+   
+   .tl-card { display: flex; flex-direction: column; gap: 0.85rem; }
+   
+   .tl-header {
+     display: flex;
+     align-items: flex-start;
+     justify-content: space-between;
+     gap: 1rem;
+     flex-wrap: wrap;
+   }
+   
+   .tl-title {
+     font-family: 'Syne', sans-serif;
+     font-size: 1.1rem;
+     font-weight: 700;
+     color: var(--text-primary);
+     margin-bottom: 0.25rem;
+   }
+   
+   .tl-company {
+     font-size: 0.85rem;
+     color: var(--text-muted);
+     display: flex;
+     align-items: center;
+     gap: 0.4rem;
+     flex-wrap: wrap;
+   }
+   
+   .tl-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+   .tl-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+   
+   /* Education */
+   .edu-section {
+     background: var(--bg-secondary);
+     border-top: 1px solid var(--border);
+     padding: 5rem 0;
+   }
+   
+   .edu-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+     gap: 1.5rem;
+     margin-top: 2.5rem;
+   }
+   
+   .edu-card { display: flex; gap: 1.2rem; align-items: flex-start; }
+   
+   .edu-icon {
+     font-size: 1.5rem;
+     color: var(--accent);
+     flex-shrink: 0;
+     margin-top: 0.1rem;
+   }
+   
+   .edu-card h3 {
+     font-family: 'Syne', sans-serif;
+     font-size: 1rem;
+     font-weight: 700;
+     color: var(--text-primary);
+     margin-bottom: 0.3rem;
+   }
+   
+   @media (max-width: 600px) {
+     .exp-header { padding-top: 3rem; padding-bottom: 2rem; }
+     .timeline { padding-left: 1.5rem; }
+     .timeline-item { padding-left: 1.8rem; }
+     .tl-dot { left: -1.2rem; }
+     .edu-section { padding: 3rem 0; }
+     .tl-header { flex-direction: column; gap: 0.5rem; }
+   }
